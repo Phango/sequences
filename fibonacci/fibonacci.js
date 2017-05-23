@@ -1,11 +1,9 @@
-var sequences = require('./sequences.js');
-
-exports.sequence = (num) => {
+exports.byCount = (count) => {
   var array = [1,1];
 
-  if (num > 2) {
+  if (count > 2) {
     var i = 2;
-    while (i < num) {
+    while (i < count) {
       array.push(array[i-2] + array[i-1]);
       i++;
     }
@@ -13,17 +11,17 @@ exports.sequence = (num) => {
   return array;
 }
 
-exports.upTo = (num) => {
+exports.byMaxValue = (max) => {
   var array = [1, 1];
   var nextElement = 0;
   var i = 2;
   do {
     nextElement = array[i-2] + array[i-1];
-    if (nextElement <= num) {
+    if (nextElement <= max) {
         array.push(nextElement);
     }
     i++;
-  } while (nextElement <= num);
+  } while (nextElement <= max);
 
   return array;
 }
