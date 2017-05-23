@@ -4,12 +4,22 @@ var range = new Range();
 class Prime {
   byCount(count) {
     var array = [];
-    var c = array.length;
     var i = 0;
-    while (c < count) {
+    while (array.length < count) {
       if (this.isPrime(i)) {
         array.push(i);
-        c = array.length;
+      }
+      i++;
+    }
+    return array;
+  }
+
+  byMax(max) {
+    var array = [];
+    var i = 0;
+    while (i <= max) {
+      if (this.isPrime(i)) {
+        array.push(i);
       }
       i++;
     }
@@ -22,7 +32,7 @@ class Prime {
         return false;
       }
     }
-    return num >= 1 ;
+    return num > 1 ;
   }
 }
 
