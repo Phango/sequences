@@ -1,4 +1,3 @@
-'use strict';
 var Prime = require('./prime');
 
 describe('Prime', () => {
