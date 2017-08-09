@@ -3,6 +3,7 @@
 A collection of sequence creators to help with coding challenges.
 
 ## Testing
-`cd path/to/sequence`
-
-`jasmine-node --autotest -color .`
+```bash
+cd path/to/sequence
+jasmine-node --autotest -color .
+```
